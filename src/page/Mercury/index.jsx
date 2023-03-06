@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import source from '../../assets/icon-source.svg';
 import { Triangle } from 'react-loader-spinner';
-import data from '../../assets/data.json'
+import planets from '../../assets/data.json';
+
 
 const Mercury = ({ home }) => {
   const { id } = useParams();
@@ -26,8 +27,10 @@ const Mercury = ({ home }) => {
     '#2D68F0',
   ];
 
+  console.log(planets)
+
   useEffect(() => {
-    setData(data)
+    setData(planets)
   }, []);
 
   useEffect(() => {
