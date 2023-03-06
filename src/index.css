@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-image: url('./assets/background-stars.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #070724;
+}
+
+.custom__container{
+  max-width: 1440px;
+  margin: 0 auto;
+}
