@@ -27,11 +27,13 @@ const Mercury = ({ home }) => {
     '#2D68F0',
   ];
 
-  console.log(planets)
+
 
   useEffect(() => {
     setData(planets)
   }, []);
+
+  console.log(data)
 
   useEffect(() => {
     setColors(allColors[id ? id : home]);
@@ -64,8 +66,6 @@ const Mercury = ({ home }) => {
   const handleMobileActive = (ev) => {
     setActive(ev.target.innerText);
   };
-
-  console.log(active);
 
   return (
     <div className="custom__container">

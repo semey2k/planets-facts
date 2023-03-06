@@ -5,8 +5,8 @@ import Mercury from './page/Mercury';
 function App() {
   return (
     <Routes>
-      <Route path='/planets-facts' element={<Mercury home={0}/>}/>
-      <Route path='/planets-facts/:id' element={<Mercury/>}/>
+      <Route path='/' element={<Mercury home={0}/>}/>
+      <Route path='/:id' element={<Mercury/>}/>
     </Routes>
   );
 }
