@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import source from '../../assets/icon-source.svg';
 import { Triangle } from 'react-loader-spinner';
+import data from '../../assets/data.json'
 
 const Mercury = ({ home }) => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const Mercury = ({ home }) => {
   ];
 
   useEffect(() => {
-    axios.get('/src/assets/data.json').then(({ data }) => setData(data));
+    setData(data)
   }, []);
 
   useEffect(() => {
