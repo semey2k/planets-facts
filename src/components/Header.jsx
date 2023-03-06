@@ -33,7 +33,7 @@ const Header = () => {
             {data.map((el, id) => (
               <li
                 className={`cursor-pointer mr-[33px] font-bold uppercase text-[14px] tracking-[1px] opacity-75 hover:opacity-100 ease-in-out duration-300`}>
-                <Link to={`/${id}`}>{el.name}</Link>
+                <Link to={`/planets-facts/${id}`}>{el.name}</Link>
               </li>
             ))}
           </ul>

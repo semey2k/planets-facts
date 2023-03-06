@@ -41,19 +41,19 @@ const Mercury = ({ home }) => {
 
   useEffect(() => {
     if (active === 'OVERVIEW') {
-      setPhotos('src/' + data[id ? id : home]?.images.planet);
+      setPhotos(data[id ? id : home]?.images.planet);
       setDescr(data[id ? id : home]?.overview.content);
       setLink(data[id ? id : home]?.overview.source);
     } else if (
       active.toUpperCase() === 'INTERNAL STRUCTURE' ||
       active.toUpperCase() === 'STRUCTURE'
     ) {
-      setPhotos('src/' + data[id ? id : home]?.images.internal);
+      setPhotos(data[id ? id : home]?.images.internal);
       setDescr(data[id ? id : home]?.structure.content);
       setLink(data[id ? id : home]?.structure.source);
     } else {
-      setPhotos('src/' + data[id ? id : home]?.images.planet);
-      setGeology('src/' + data[id ? id : home]?.images.geology);
+      setPhotos( data[id ? id : home]?.images.planet);
+      setGeology(data[id ? id : home]?.images.geology);
       setDescr(data[id ? id : home]?.geology.content);
       setLink(data[id ? id : home]?.geology.source);
     }
@@ -70,7 +70,7 @@ const Mercury = ({ home }) => {
   return (
     <div className="custom__container">
       {!data[id ? id : home] ? (
-        <div className="absolute left-0 top-0 w-full h-full">
+        <div className="absolute left-0 top-[76px] w-full h-full">
           <Triangle
             height="200"
             width="200"
