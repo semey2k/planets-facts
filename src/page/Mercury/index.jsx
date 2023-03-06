@@ -26,7 +26,7 @@ const Mercury = ({ home }) => {
   ];
 
   useEffect(() => {
-    axios.get('/src/data.json').then(({ data }) => setData(data));
+    axios.get('/src/assets/data.json').then(({ data }) => setData(data));
   }, []);
 
   useEffect(() => {

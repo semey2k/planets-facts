@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import data from '../data.json';
+import data from '../assets/data.json';
 import Modal from './Modal';
 
 const Header = () => {
