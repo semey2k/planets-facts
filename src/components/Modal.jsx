@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import data from '../assets/data.json';
+import data from '../data.json';
 
 const Modal = ({ open, setOpen }) => {
   const allColors = [

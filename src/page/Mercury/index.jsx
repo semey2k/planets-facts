@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import source from '../../assets/icon-source.svg';
 import { Triangle } from 'react-loader-spinner';
-import planets from '../../assets/data.json';
-
+import planets from '../../data.json';
+import earth from '../../assets/planet-earth.svg'
 
 const Mercury = ({ home }) => {
   const { id } = useParams();
@@ -27,13 +27,11 @@ const Mercury = ({ home }) => {
     '#2D68F0',
   ];
 
-
-
   useEffect(() => {
-    setData(planets)
+    setData(planets);
   }, []);
 
-  console.log(data)
+  console.log(planets);
 
   useEffect(() => {
     setColors(allColors[id ? id : home]);
@@ -52,7 +50,7 @@ const Mercury = ({ home }) => {
       setDescr(data[id ? id : home]?.structure.content);
       setLink(data[id ? id : home]?.structure.source);
     } else {
-      setPhotos( data[id ? id : home]?.images.planet);
+      setPhotos(data[id ? id : home]?.images.planet);
       setGeology(data[id ? id : home]?.images.geology);
       setDescr(data[id ? id : home]?.geology.content);
       setLink(data[id ? id : home]?.geology.source);
@@ -90,7 +88,7 @@ const Mercury = ({ home }) => {
           <div className="block md:hidden">
             <ul className="flex justify-between  px-[24px]  border-b-2 border-b-[#ffffff1f]">
               <li
-                style={{ borderBottom: active === 'OVERVIEW' ? `3px solid ${colors}` : '',  }}
+                style={{ borderBottom: active === 'OVERVIEW' ? `3px solid ${colors}` : '' }}
                 onClick={(ev) => handleMobileActive(ev)}
                 className={`py-[20px] uppercase font-bold tracking-[1.9px] text-[9px] leading-[10px] cursor-pointer `}>
                 overview
@@ -114,11 +112,13 @@ const Mercury = ({ home }) => {
               {active === 'OVERVIEW' ||
               active === 'INTERNAL STRUCTURE' ||
               active === 'STRUCTURE' ? (
-                <img
-                  className="max-h-[256px] md:max-h-[422px] lg:max-h-[582px]"
-                  src={photos}
-                  alt=""
-                />
+                <>
+                  <img
+                    className="max-h-[256px] md:max-h-[422px] lg:max-h-[582px]"
+                    src={photos}
+                    alt=""
+                  />
+                </>
               ) : (
                 <>
                   <img
