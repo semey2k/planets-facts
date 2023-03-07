@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import source from '../../assets/icon-source.svg';
+import source from '/icon-source.svg';
 import { Triangle } from 'react-loader-spinner';
 import planets from '../../data.json';
-import earth from '../../assets/planet-earth.svg'
+// import earth from '/assets/planet-earth.svg'
 
 const Mercury = ({ home }) => {
   const { id } = useParams();
@@ -39,18 +39,18 @@ const Mercury = ({ home }) => {
 
   useEffect(() => {
     if (active === 'OVERVIEW') {
-      setPhotos('src/' + data[id ? id : home]?.images.planet);
+      setPhotos(data[id ? id : home]?.images.planet);
       setDescr(data[id ? id : home]?.overview.content);
       setLink(data[id ? id : home]?.overview.source);
     } else if (
       active.toUpperCase() === 'INTERNAL STRUCTURE' ||
       active.toUpperCase() === 'STRUCTURE'
     ) {
-      setPhotos('src/' + data[id ? id : home]?.images.internal);
+      setPhotos(data[id ? id : home]?.images.internal);
       setDescr(data[id ? id : home]?.structure.content);
       setLink(data[id ? id : home]?.structure.source);
     } else {
-      setPhotos('src/' + data[id ? id : home]?.images.planet);
+      setPhotos(data[id ? id : home]?.images.planet);
       setGeology(data[id ? id : home]?.images.geology);
       setDescr(data[id ? id : home]?.geology.content);
       setLink(data[id ? id : home]?.geology.source);
@@ -115,7 +115,7 @@ const Mercury = ({ home }) => {
                 <>
                   <img
                     className="max-h-[256px] md:max-h-[422px] lg:max-h-[582px]"
-                    src={earth}
+                    src={photos?.slice(9)}
                     alt=""
                   />
                 </>
@@ -123,12 +123,12 @@ const Mercury = ({ home }) => {
                 <>
                   <img
                     className="max-h-[256px] md:max-h-[422px] lg:max-h-[582px]"
-                    src={photos}
+                    src={photos?.slice(9)}
                     alt=""
                   />
                   <img
                     className="lg:w-[163px]  w-[73px] md:w-[123px]  absolute bottom-0"
-                    src={geology}
+                    src={geology?.slice(9)}
                     alt=""
                   />
                 </>
