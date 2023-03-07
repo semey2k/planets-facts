@@ -39,18 +39,18 @@ const Mercury = ({ home }) => {
 
   useEffect(() => {
     if (active === 'OVERVIEW') {
-      setPhotos(data[id ? id : home]?.images.planet);
+      setPhotos('src/' + data[id ? id : home]?.images.planet);
       setDescr(data[id ? id : home]?.overview.content);
       setLink(data[id ? id : home]?.overview.source);
     } else if (
       active.toUpperCase() === 'INTERNAL STRUCTURE' ||
       active.toUpperCase() === 'STRUCTURE'
     ) {
-      setPhotos(data[id ? id : home]?.images.internal);
+      setPhotos('src/' + data[id ? id : home]?.images.internal);
       setDescr(data[id ? id : home]?.structure.content);
       setLink(data[id ? id : home]?.structure.source);
     } else {
-      setPhotos(data[id ? id : home]?.images.planet);
+      setPhotos('src/' + data[id ? id : home]?.images.planet);
       setGeology(data[id ? id : home]?.images.geology);
       setDescr(data[id ? id : home]?.geology.content);
       setLink(data[id ? id : home]?.geology.source);
@@ -115,7 +115,7 @@ const Mercury = ({ home }) => {
                 <>
                   <img
                     className="max-h-[256px] md:max-h-[422px] lg:max-h-[582px]"
-                    src={photos}
+                    src={'src/assets/planet-earth.svg'}
                     alt=""
                   />
                 </>
