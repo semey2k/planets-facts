@@ -23,7 +23,7 @@ const Modal = ({ open, setOpen }) => {
             onClick={() => {
               setOpen(false);
             }}
-            to={`/${id}`}
+            to={`/planets-facts/${id}`}
             className="flex justify-between items-center py-[20px] border-b-2 border-[#ffffff10]">
             <div className="flex">
               <span
