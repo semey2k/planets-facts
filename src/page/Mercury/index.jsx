@@ -115,7 +115,7 @@ const Mercury = ({ home }) => {
                 <>
                   <img
                     className="max-h-[256px] md:max-h-[422px] lg:max-h-[582px]"
-                    src={'src/assets/planet-earth.svg'}
+                    src={earth}
                     alt=""
                   />
                 </>
